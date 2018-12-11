@@ -1,0 +1,295 @@
+@font-face {
+    font-family:'Gotham';
+    src: url('../fonts/Gotham-Bold.eot');
+	src: url('../fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Gotham-Bold.woff2') format('woff2'),
+		url('../fonts/Gotham-Bold.woff') format('woff'),
+		url('../fonts/Gotham-Bold.svg#Gotham-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-00FE;
+}
+
+body {
+    font-family: 'Gotham';
+    background-color: #fafafa;
+}
+
+.titleDark {
+    font-family: 'Gotham';
+    font-weight: bold;
+    font-size: 3em;
+    color: #181821;
+    text-align: center;
+    padding: 1.5em 0 1.5em 0;
+}
+
+.titleLight {
+    font-family: 'Gotham';
+    font-weight: bold;
+    font-size: 3em;
+    color: #fafafa;
+    text-align: center;
+    padding: 1.5em 0 1.5em 0;
+}
+
+/* HEADER */
+
+h1 {
+    display: none;
+}
+
+#header {
+    width: 100%;
+    height: 7.5em;
+    background-color: #fafafa;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+}
+
+#mainNav {
+    font-family: 'Gotham';
+    font-weight: Bold;
+    font-size: 1.25em;
+    width: 100%;
+    background-color: #29c74b;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#mainNav ul {
+    list-style: none;
+}
+
+#mainNav li {
+    display: inline-block;
+    border-bottom: none;
+    float: left;
+}
+
+#mainNav li a{
+    display: block;
+    padding: 25px 12px 0 12px;
+    color: #181821;
+    text-decoration: none;
+    width: 100%;
+}
+
+#mainNav li a:hover {
+    color: #39394c
+}
+
+
+/* SVG */
+
+#svgContainer {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#mainVignette3{display:block;}
+#mainVignette2{display:none;}
+#mainVignette{display:none;}
+
+#mainTitle {
+    width: 40vw;
+    height: auto;
+    background-color: #fafafa;
+    position: relative;
+    left: 28vw;
+    top: 40vh;
+    z-index: 5;
+}
+
+#mainTitle h2 {
+    font-family: 'Gotham';
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #181821;
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+
+/* ABOUT */
+
+#fold2 {
+    /*padding: 85px 0 85px 0;*/
+}
+
+.info {
+    height: 620px;
+    background-color: #fafafa;
+}
+
+#about1 {
+
+}
+
+#about2 {
+
+}
+
+#about3 {
+
+}
+
+
+/* PORTFOLIO MOBILE */
+
+#fold3Mob {
+    display: block;
+    height: auto;
+    padding: 0 1.563em 5em 1.563em;
+    background-color: #181821;
+}
+
+/* !!! Look at this once images are ready https://foundation.zurb.com/sites/docs/v/5.5.3/components/block_grid.html*/
+.pPieceMob {
+    height: 45vw;
+    /*background-color: #29c74b;*/
+}
+
+
+#ppMob1 {
+    background-image: url("../images/icon1.png");
+    background-size: cover;
+}
+
+#ppMob2 {
+    background-image: url("../images/icon2.png");
+    background-size: cover;
+}
+
+#ppMob3 {
+    background-image: url("../images/icon3.png");
+    background-size: cover;
+}
+
+#ppMob4 {
+    background-image: url("../images/icon4.png");
+    background-size: cover;
+}
+
+#ppMob5 {
+    background-image: url("../images/icon5.png");
+    background-size: cover;
+}
+
+#ppMob6 {
+    background-image: url("../images/icon6.png");
+    background-size: cover;
+}
+
+
+/* PORTFOLIO DESKTOP */
+
+#fold3Desk {
+    display: none;
+    width: 100%;
+    height: auto;
+    padding: 0 0 5em 0;
+    background-color: #181821;
+}
+
+.pPieceDesk {
+    height: 100px;
+    margin-bottom: 1.563em;
+}
+
+#pPiece1 {
+    background-image: url("../images/iconDesk1.png");
+    background-size: cover;
+}
+
+#pPiece2 {
+    background-image: url("../images/iconDesk2.png");
+    background-size: cover;
+}
+
+#pPiece3 {
+    background-image: url("../images/iconDesk3.png");
+    background-size: cover;
+}
+
+#pPiece4 {
+    background-image: url("../images/iconDesk4.png");
+    background-size: cover;
+}
+
+#pPiece5 {
+    background-image: url("../images/iconDesk5.png");
+    background-size: cover;
+}
+
+#pPiece6 {
+    background-image: url("../images/iconDesk6.png");
+    background-size: cover;
+}
+
+.lightbox {
+    height: 626px;
+    background-image: url("../images/pPiece1.png");
+    background-repeat: no-repeat;
+}
+
+
+/* CONTACT */
+
+#submitButton {
+    margin-bottom: 3em;
+}
+
+textarea {
+    color: #181821;
+}
+
+.button {
+    background-color: #181821;
+}
+
+
+/* MEDIA QUERIES */
+
+/*Tablet*/
+@media screen and (min-width: 48em) {
+
+    #svgContainer {height: 100vh;}
+    
+    #mainVignette3{display:none;}
+    #mainVignette2{display:block}
+    #mainVignette{display:none;}
+    
+    #mainNav {font-size: 1.6em;}
+    #mainNav li a{padding: 20px 75px 0 0;}
+
+    #fold3Mob {display: block;}
+    #fold3Desk {display: none;}
+}
+
+/*Desktop*/
+@media screen and (min-width: 87.5em) {
+
+    #svgContainer {height: 100vh;}
+
+    #mainVignette3{display:none;}
+    #mainVignette2{display:none;}
+    #mainVignette{display:block}
+
+    #mainNav {font-size: 1.6em;}
+    #mainNav li a{padding: 20px 75px 0 0;}
+
+    #title {
+        height: 150px;
+        width: 40%;
+    }
+
+    #fold3Mob {display: none;}
+    #fold3Desk {display: block;}
+}
