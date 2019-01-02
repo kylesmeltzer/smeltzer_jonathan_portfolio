@@ -4,8 +4,8 @@
 
         data: {
             mainmessage : "welcome to my video app!",
-            videodata : [],
-            singlemoviedata : [],
+            portfoliodata : [],
+            piecedata : [],
 
             piecetitle : "",
             mainimage : "",
@@ -16,28 +16,25 @@
             subtext2 : "",
             subimage3 : "",
             subtext3 : "",
-            videotitle : "",
-            videosource : "",
-            videodescription : "",
             showDetails : false
         },
 
         created : function() {
-            this.fetchMovieData(null);
+            this.fetchPortfolioData(null);
         },
 
         methods : {
             fetchMore(e) {
-                this.fetchMovieData(e.currentTarget.dataset.movie); // this will be a number (id)
+                this.fetchPortfolioData(e.currentTarget.dataset.portfolio);
             },
 
-            loadMovie(e) {
+            loadPiece(e) {
                 // stub
                 e.preventDefault();
 
                 dataKey = e.currentTarget.getAttribute('href');
 
-                currentData = this.videodata.filter(tbl_portfoliopieces => tbl_portfoliopieces.main_image === dataKey);
+                currentData = this.portfoliodata.filter(tbl_portfoliopieces => tbl_portfoliopieces.main_image === dataKey);
 
                 this.piecetitle = currentData[0].title;
                 this.mainimage = currentData[0].main_image;
@@ -50,36 +47,31 @@
                 this.subtext3 = currentData[0].sub_desc3;
                 //this.mainimage = dataKey; //I commented this out because I don't think I need it. It must have something to do with playing the video?
 
-
-                this.videotitle = currentData[0].vid_name;
-                this.videodescription = currentData[0].vid_desc;
                 //this.videosource = dataKey;
 
                 this.showDetails = true;
 
-                setTimeout(function() { window.scrollTo(0, 1200); }, 500);
+                //setTimeout(function() { window.scrollTo(0, 1900); }, 500);
             },
 
-            scrollBackUp() {
-                window.scrollTo(0, 0);
-                this.showDetails = false;
-                this.videsource = "";
-            },
+            // scrollBackUp() {
+            //     window.scrollTo(0, 0);
+            //     this.showDetails = false;
+            //     this.videsource = "";
+            // },
 
-            fetchMovieData(movie) {
-                url = movie ? `./includes/index.php?movie=${movie}` : './includes/index.php';
+            fetchPortfolioData(portfolio) {
+                url = portfolio ? `./includes/index.php?movie=${portfolio}` : './includes/index.php';
 
                 fetch(url) // pass in the one or many query
                 .then(res => res.json())
                 .then(data => {
-                    if (movie) {
-                        // getting one movie, so use the single array
+                    if (portfolio) {
                         console.log(data);
-                        this.singlemoviedata = data;
+                        this.piecedata = data;
                     } else {
-                        // push all the video (or portfolio content) into the video array
                         console.log(data);
-                        this.videodata = data;
+                        this.portfoliodata = data;
                     }
                 })
                 .catch(function(error) {

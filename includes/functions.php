@@ -1,13 +1,13 @@
 <?php
 include 'connect.php';
 
-function get_single_video($pdo, $vid) {
-    $query = "SELECT * FROM tbl_portfoliopieces WHERE id = '$vid'";
+function get_piece($pdo, $item) {
+    $query = "SELECT * FROM tbl_portfoliopieces WHERE id = '$item'";
 
-    $get_video = $pdo->query($query);
+    $get_item = $pdo->query($query);
     $results = array();
 
-    while($row = $get_video->fetch(PDO::FETCH_ASSOC)) {
+    while($row = $get_item->fetch(PDO::FETCH_ASSOC)) {
         $results[] = $row;
 
         // you could run subresult queries here - just write another function and append.
@@ -16,13 +16,13 @@ function get_single_video($pdo, $vid) {
     return $results;
 }
 
-function get_all_videos($pdo) {
+function get_portfolio($pdo) {
     $query = "SELECT * FROM tbl_portfoliopieces";
 
-    $get_video = $pdo->query($query);
+    $get_item = $pdo->query($query);
     $results = array();
 
-    while($row = $get_video->fetch(PDO::FETCH_ASSOC)) {
+    while($row = $get_item->fetch(PDO::FETCH_ASSOC)) {
         $results[] = $row;
     }
 

@@ -2,15 +2,13 @@
 
 include 'functions.php';
 
-if (isset($_GET['movie'])) {
-    // pass the connection and the movie id to a function
-    $data = get_single_video($conn, $_GET['movie']);
+if (isset($_GET['portfolio'])) {
+    $data = get_piece($conn, $_GET['portfolio']);
     echo json_encode($data);
 }
 
 else {
-    // pass the connection and the movie id to a function
-    $data = get_all_videos($conn);
+    $data = get_portfolio($conn);
     echo json_encode($data);
 }
 ?>
