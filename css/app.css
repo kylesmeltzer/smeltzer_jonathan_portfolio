@@ -1,10 +1,10 @@
 @font-face {
     font-family:'Gotham';
-    src: url('../fonts/Gotham-Bold.eot');
-	src: url('../fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Gotham-Bold.woff2') format('woff2'),
-		url('../fonts/Gotham-Bold.woff') format('woff'),
-		url('../fonts/Gotham-Bold.svg#Gotham-Bold') format('svg');
+    src: url('../fonts/Gotham.eot');
+	src: url('../fonts/Gotham.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Gotham.woff2') format('woff2'),
+		url('../fonts/Gotham.woff') format('woff'),
+		url('../fonts/Gotham.svg#Gotham-Bold') format('svg');
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
@@ -22,7 +22,7 @@ body {
     font-size: 3em;
     color: #181821;
     text-align: center;
-    padding: 1.5em 0 1.5em 0;
+    padding: 4em 0 1.5em 0;
 }
 
 .titleLight {
@@ -31,7 +31,7 @@ body {
     font-size: 3em;
     color: #fafafa;
     text-align: center;
-    padding: 1.5em 0 1.5em 0;
+    padding: 4em 0 1.5em 0;
 }
 
 /* HEADER */
@@ -196,22 +196,50 @@ h1 {
     height: auto;
     padding: 0 0 5em 0;
     background-color: #181821;
+    color: #fafafa;
 }
 
-.pPieceDesk {
-    height: 100px;
-    margin-bottom: 1.563em;
+.thumbBar {
+    margin: 0 auto;  
 }
 
 .thumbs {
-    float: left;
+    display: inline-block; 
+    margin: 0 14px 0 14px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.thumbnails{
+    border: 1px solid #fafafa;
 }
 
 .lightbox {
-    height: 626px;
-    background-image: url("../images/pPiece1.png");
-    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: all 1s;
+    max-height: 0; /*for some reason this is critical... look into it later*/
 }
+
+.showPiece { 
+    max-height: 3000px; 
+}
+
+.portfolioTitle {
+    margin: 0 auto;
+    padding: 50px 0 30px 0;
+    font-family: 'Gotham';
+    font-weight: bold;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.portfolioText {
+    padding: 15px 0 15px 0;
+    font-size: 1.1em;
+    line-height: 2.2;
+}
+
 
 
 /* CONTACT */
@@ -226,6 +254,22 @@ textarea {
 
 .button {
     background-color: #181821;
+}
+
+/* FOOTER */
+
+#footer {
+    width: 100%;
+    height: auto;
+    background-color: #39394c;
+}
+
+#footer h2 {
+    color: #fafafa;
+    font-family: 'Gotham';
+    font-size: 1em;
+    padding: 1em 0 1em 0;
+    margin: 0 auto;
 }
 
 
