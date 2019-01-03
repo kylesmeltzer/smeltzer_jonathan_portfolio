@@ -49,21 +49,13 @@
       </div>
     </div>
 
-    <div id="fold3Mob"><!--a name="portfolioA"--></a>
-        <div class="grid-container">
-            <div class="small-12 cell">
-                <h2 class="titleLight">PORTFOLIO</h2>
-            </div>
-        </div>
-    </div>
-
     <div id="fold3Desk"><a name="portfolioA"></a>
       <div class="grid-container">
-          <div class="large-12 cell">
+          <div class="large-12 small-12 cell">
               <h2 class="titleLight">PORTFOLIO</h2>
           </div>
 
-        <div class="large-12 cell">
+        <div class="large-12 small-12 cell">
             <main id="app">
               <ul class="thumbBar">
                 <li v-for="tbl_portfoliopieces in portfoliodata" class="thumbs">
@@ -79,29 +71,26 @@
               <section class="lightbox" :class="{'showPiece' : showDetails }">
                 <div class="grid-x grid-padding-x">
                   <h3 class="portfolioTitle"> {{ piecetitle }}</h3>
-                  <div class="large-12 cell" class="mainimage">
+                  <div class="large-12 small-12 cell" class="mainimage">
                     <img :src="'images/' + mainimage" ><!--width="209px"-->
                   </div>
-                  <div class="large-12 cell">
+                  <div class="large-12 small-12 cell">
                     <p class="portfolioText"> {{ maintext }} </p>
                   </div>
-                  <div class="large-4 cell" id="subI1">
+                  <div class="large-4 small-12 cell" id="subI1">
                     <img :src="'images/' + subimage1">
                   </div>
-                  <div class="large-8 cell">
+                  <div class="large-8 small-12 cell">
                     <p class="portfolioText"> {{ subtext1 }} </p>
                   </div>
-                  <div class="large-6 cell">
+                  <div class="large-6 small-12 cell">
                     <p class="portfolioText"> {{ subtext2 }} </p>
                   </div>
-                  <div class="large-6 cell" id="subI2">
+                  <div class="large-6 small-12 cell" id="subI2">
                     <img :src="'images/' + subimage2">
                   </div>
                 </div>
               </section>
-              <!--div class="up-arrow">
-                  <span v-on:click="scrollBackUp" :class="{'show-scroller': showDetails }">^</span>
-              </div-->
             </main>
           </div>
 

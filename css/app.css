@@ -121,6 +121,7 @@ h1 {
 
 #fold2 {
     /*padding: 85px 0 85px 0;*/
+    overflow: hidden;
 }
 
 .info {
@@ -141,7 +142,7 @@ h1 {
 }
 
 
-/* PORTFOLIO MOBILE */
+/* PORTFOLIO MOBILE 
 
 #fold3Mob {
     display: block;
@@ -150,6 +151,8 @@ h1 {
     background-color: #181821;
 }
 
+*/
+
 /* !!! Look at this once images are ready https://foundation.zurb.com/sites/docs/v/5.5.3/components/block_grid.html*/
 .pPieceMob {
     height: 45vw;
@@ -157,41 +160,9 @@ h1 {
 }
 
 
-#ppMob1 {
-    background-image: url("../images/icon1.png");
-    background-size: cover;
-}
-
-#ppMob2 {
-    background-image: url("../images/icon2.png");
-    background-size: cover;
-}
-
-#ppMob3 {
-    background-image: url("../images/icon3.png");
-    background-size: cover;
-}
-
-#ppMob4 {
-    background-image: url("../images/icon4.png");
-    background-size: cover;
-}
-
-#ppMob5 {
-    background-image: url("../images/icon5.png");
-    background-size: cover;
-}
-
-#ppMob6 {
-    background-image: url("../images/icon6.png");
-    background-size: cover;
-}
-
-
 /* PORTFOLIO DESKTOP */
 
 #fold3Desk {
-    display: none;
     width: 100%;
     height: auto;
     padding: 0 0 5em 0;
@@ -287,8 +258,8 @@ textarea {
     #mainNav {font-size: 1.6em;}
     #mainNav li a{padding: 20px 75px 0 0;}
 
-    #fold3Mob {display: block;}
-    #fold3Desk {display: none;}
+    /*#fold3Mob {display: block;}
+    #fold3Desk {display: none;}*/
 }
 
 /*Desktop*/
@@ -308,6 +279,6 @@ textarea {
         width: 40%;
     }
 
-    #fold3Mob {display: none;}
-    #fold3Desk {display: block;}
+    /*#fold3Mob {display: none;}
+    #fold3Desk {display: block;}*/
 }
